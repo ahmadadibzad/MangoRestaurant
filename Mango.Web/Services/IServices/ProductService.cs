@@ -45,7 +45,7 @@ namespace Mango.Web.Services.IServices
 
         public async Task<T> GetProductByIdAsync<T>(int id)
         {
-            return await base.SendAsync<T>(new ApiRequest
+            return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.GET,
                 Url = SD.ProductAPIBase + "/api/products/" + id,
